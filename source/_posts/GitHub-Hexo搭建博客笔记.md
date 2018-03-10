@@ -124,3 +124,27 @@ next主题有三个样式，使用是Pisces
 ```
 language: zh-Hans
 ```
+
+#### 个性化配置
+
+主要个性主题配置文件`_config.yml`
+
+社交主页设置, 找到`social`
+```
+social:
+  GitHub: https://github.com/ToryCrox
+```
+
+#### 增加侧栏菜单条目
+
+默认的侧栏菜单条目有：首页、归档、标签、关于、搜索等。如果你想要增加其他的菜单条目，修改主题配置文件`_config.yml`里的`Menu Settings`中的`menu`和`menu_icons`两个地方
+
+
+
+[主题配置 - NexT 使用文档](https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/theme-settings.html)
+
+[第三方服务集成 - NexT 使用文档](https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/third-party-services.html)
+
+[内置标签 - NexT 使用文](https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/tag-plugins.html)
+
+[档进阶设定 - NexT 使用文档](https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/advanced-settings.html)
