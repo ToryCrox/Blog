@@ -108,7 +108,7 @@ git clone https://github.com/iissnan/hexo-theme-next themes/next
 
 打开站点_config.yml文件，配置主题为next:
 
-```python
+```ini
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
@@ -139,7 +139,29 @@ social:
 
 默认的侧栏菜单条目有：首页、归档、标签、关于、搜索等。如果你想要增加其他的菜单条目，修改主题配置文件`_config.yml`里的`Menu Settings`中的`menu`和`menu_icons`两个地方
 
+#### 启用搜索功能
+自定义站点内容搜索Local Search
 
+1. 安装 `hexo-generator-searchdb`，在站点的根目录下执行以下命令：
+```bash
+$ npm install hexo-generator-searchdb --save
+```
+
+2. 编辑 站点配置文件，新增以下内容到任意位置：
+```ini
+search:
+  path: search.xml
+  field: post Toggle strikethrough
+  format: html
+  limit: 10000
+```
+
+3. 编辑 主题配置文件，启用本地搜索功能：
+```ini
+# Local search
+local_search:
+  enable: true
+```
 
 [主题配置 - NexT 使用文档](https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/theme-settings.html)
 

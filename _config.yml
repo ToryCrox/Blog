@@ -80,3 +80,10 @@ deploy:
   type: git
   repo: git@github.com:ToryCrox/torycrox.github.io
   branch: master
+
+#local search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
