@@ -1,7 +1,7 @@
 ---
 title: GitHub+Hexo搭建博客笔记
 date: 2018-03-04 22:50:40
-tags: hexo
+tags: "hexo"
 ---
 
 ## 参考资料
@@ -162,6 +162,29 @@ search:
 local_search:
   enable: true
 ```
+
+####添加标签页面
+
+1. 使用命令新建一个标签页面
+```bash
+hexo new page tags
+```
+
+2. 编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下：
+```
+title: 标签
+date: 2014-12-22 12:39:04
+type: "tags"
+```
+
+3. 修改菜单，编辑主题配置文件 ， 添加 tags 到 menu 中
+```ini
+menu:
+  home: /
+  archives: /archives
+  tags: /tags
+```
+
 
 [主题配置 - NexT 使用文档](https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/theme-settings.html)
 
