@@ -1,7 +1,7 @@
 ---
 title: Stetho使用技巧
 date: 2018-03-04 23:12:08
-tags: android
+tags: Android
 ---
 
 > Stetho是Facebook开源的一个Android应用的调试工具
