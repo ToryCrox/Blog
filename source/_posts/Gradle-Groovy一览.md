@@ -6,6 +6,8 @@ tags: Gradle
 
 ## 参考资料
 
+- [Gradle Plugin 用户使用指南](https://juejin.im/entry/592f93ada0bb9f0058a22641)
+- [Android Studio 自定义Gradle Plugin][https://www.jianshu.com/p/af2b0a43133f]
 - [Gradle 入门--只此一篇](https://www.jianshu.com/p/001abe1d8e95)
 - [给 ANDROID 初学者的 GRADLE 知识普及](http://stormzhang.com/android/2016/07/02/gradle-for-android-beginners/)
 - [深入理解Android之Gradle](http://blog.csdn.net/innost/article/details/48228651)

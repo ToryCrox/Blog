@@ -99,6 +99,13 @@ hexo d
 
 ### hexo配置
 
+#### Next主题配置官方文档
+
+> - [主题配置 - NexT 使用文档](http://theme-next.iissnan.com/theme-settings.html)  
+> - [第三方服务集成 - NexT 使用文档](http://theme-next.iissnan.com/third-party-services.html)  
+> - [内置标签 - NexT 使用文档](http://theme-next.iissnan.com/tag-plugins.html)  
+> - [进阶设定 - NexT 使用文档](eme-next.iissnan.com/advanced-settings.html)
+
 #### 更换主题
 theme下载：https://hexo.io/themes/
 
@@ -139,6 +146,13 @@ social:
 
 默认的侧栏菜单条目有：首页、归档、标签、关于、搜索等。如果你想要增加其他的菜单条目，修改主题配置文件`_config.yml`里的`Menu Settings`中的`menu`和`menu_icons`两个地方
 
+设置侧栏的位置:修改 主题配置文件 中的 `sidebar` 字段:
+```ini
+sidebar:
+  position: left
+```
+见:http://theme-next.iissnan.com/getting-started.html#sidebar-settings
+
 #### 启用搜索功能
 自定义站点内容搜索Local Search
 
@@ -163,7 +177,7 @@ local_search:
   enable: true
 ```
 
-####添加标签页面
+#### 添加标签页面
 
 1. 使用命令新建一个标签页面
 ```bash
@@ -185,11 +199,3 @@ menu:
   tags: /tags
 ```
 
-
-[主题配置 - NexT 使用文档](https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/theme-settings.html)
-
-[第三方服务集成 - NexT 使用文档](https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/third-party-services.html)
-
-[内置标签 - NexT 使用文](https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/tag-plugins.html)
-
-[档进阶设定 - NexT 使用文档](https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/advanced-settings.html)
