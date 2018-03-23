@@ -106,6 +106,9 @@ hexo d
 > - [内置标签 - NexT 使用文档](http://theme-next.iissnan.com/tag-plugins.html)  
 > - [进阶设定 - NexT 使用文档](eme-next.iissnan.com/advanced-settings.html)
 
+### 个性个配置
+> - [hexo的next主题个性化配置教程](https://segmentfault.com/a/1190000009544924#articleHeader12)
+
 #### 更换主题
 theme下载：https://hexo.io/themes/
 
@@ -183,6 +186,24 @@ local_search:
 ```bash
 hexo new page tags
 ```
+
+2. 编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下：
+```
+title: 标签
+date: 2014-12-22 12:39:04
+type: "tags"
+```
+
+3. 修改菜单，编辑主题配置文件 ， 添加 tags 到 menu 中
+```ini
+menu:
+  home: /
+  archives: /archives
+  tags: /tags
+```
+
+
+[主题配置 - NexT 使用文档](https://link.zhihu.com/?target=http%3A//theme-next.iissnan.com/theme-settings.html)
 
 2. 编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下：
 ```

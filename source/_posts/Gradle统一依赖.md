@@ -12,14 +12,14 @@ def supportVersion = "27.1.0"
 
 ext{
     //定义各版本号
-    android = [
+    configs = [
             compileSdkVersion: 27,
             buildToolsVersion: "25.0.2",
             miniSdkVersion: 17,
             targetSdkVersion: 27
     ]
 
-    dependences = [
+    librarys = [
             appcompat           : "com.android.support:appcompat-v7:$supportVersion",
             cardview            : "com.android.support:cardview-v7:$supportVersion",
             recyclerview        : "com.android.support:recyclerview-v7:$supportVersion",
@@ -44,6 +44,12 @@ ext{
             butterknife         : "com.jakewharton:butterknife:8.6.0",
             butterknifeCompiler : "com.jakewharton:butterknife-compiler:8.6.0",
 
+            //滑动关闭Activity
+            slidr               : "com.r0adkll:slidableactivity:2.0.6",
+
+            eventbus            : "org.greenrobot:eventbus:3.1.1",
+            eventbusCompiler    : "org.greenrobot:eventbus-annotation-processor:3.1.1",
+
             junit               : "junit:junit:4.12"
     ]
 }
@@ -58,8 +64,6 @@ apply from: "config.gradle"
 ## 在各模块的`build.gradle`添加
 
 ```gradle
-def configs = rootProject.ext.android
-def librarys = rootProject.ext.dependences
 
 android {
     compileSdkVersion configs.compileSdkVersion
@@ -77,42 +81,46 @@ android {
 
 ```gradle
 dependencies {
- //support相关包
-    compile librarys.appcompat
-    compile librarys.design
-    compile librarys.cardview
-    compile librarys.recyclerview
-    compile librarys.preference
-    compile librarys.constraintLayout
-    compile librarys.palette
+    //support相关包
+    compile libraries.appcompat
+    compile libraries.design
+    compile libraries.cardview
+    compile libraries.recyclerview
+    compile libraries.preference
+    compile libraries.constraintLayout
+    compile libraries.palette
 
     //rx
-    compile librarys.rxjava
-    compile librarys.rxandroid
+    compile libraries.rxjava
+    compile libraries.rxandroid
 
     //okhttp
-    compile librarys.okhttp3
+    compile libraries.okhttp3
 
     //retrofit
-    compile librarys.retrofit
-    compile librarys.retrofitRxjava
+    compile libraries.retrofit
+    compile libraries.retrofitRxjava
 
     //gson
-    compile librarys.gson
-    compile librarys.converterGson
+    compile libraries.gson
+    compile libraries.converterGson
     //glide
-    compile librarys.glide
+    compile libraries.glide
 
-    compile librarys.fastjson
+    compile libraries.fastjson
 
     //stetho调试时使用
-    compile librarys.stetho
-    compile librarys.stethoOkhttp3
+    compile libraries.stetho
+    compile libraries.stethoOkhttp3
 
 
     //butterknife引用
-    compile librarys.butterknife
-    annotationProcessor librarys.butterknifeCompiler
+    compile libraries.butterknife
+    annotationProcessor libraries.butterknifeCompiler
+    
+    //eventBus
+    implementation libraries.eventbus
+    annotationProcessor           libraries.eventbusCompiler
 
 }
 ```
