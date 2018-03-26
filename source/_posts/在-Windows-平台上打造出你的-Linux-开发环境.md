@@ -15,7 +15,7 @@ tags: windows
 cmder有两个版本，mini版和full版
 mini版本，就几M大小，这个也就用来替代windows的cmd
 full版本比较大，100多M，模拟了一些常用linux命令（比如ls、cat、more、cp、mv、rm、find、grep等），自带git,而且自带vim。（如果已经安装了git for windows可以只使用mini版，但是要把git的src/bin添加到path中去）
-
+<!--more-->
 ### 快捷键
 
 - `start .`  或者`e.` 打开当前路径所在的文件夹

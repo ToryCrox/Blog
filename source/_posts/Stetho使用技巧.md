@@ -19,7 +19,7 @@ compile  "com.facebook.stetho:stetho:1.3.1"
 compile  "com.facebook.stetho:stetho-okhttp3:1.3.1"
 ```
 如果使用了okhttp，则需要添加第二个依赖
-
+<!--more-->
 ### 2. 初始化 Stetho
 
 ```java

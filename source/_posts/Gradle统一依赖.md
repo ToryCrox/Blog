@@ -54,7 +54,7 @@ ext{
     ]
 }
 ```
-
+<!--more-->
 ## 在根目录下的`build.gradle`文件顶部添加:
 
 ```gradle

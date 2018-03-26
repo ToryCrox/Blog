@@ -11,7 +11,7 @@ tags: python
 >- 中文教程及自动化测试介绍https://my.oschina.net/u/1433482/blog/634218?fromerr=oGg6OFhY
 
 
-
+<!--more-->
 **Python的设计哲学是“优雅”、“明确”、“简单”**
 > Python开发者的哲学是“用一种方法，最好是只有一种方法来做一件事”
 

@@ -15,7 +15,7 @@ tags: Gradle
 - [Gradle入门系列](http://blog.jobbole.com/71999/)
 - 官方文档 https://docs.gradle.org/current/dsl/
 - api文档： http://www.groovy-lang.org/api.html
-
+<!--more-->
 ## 简介
 `Groovy`是一种动态语言。它和`Java`一样，也运行于Java虚拟机中。几乎完全兼容Java
 `Gradle`提供了构建项目的一个框架，可以单独安装使用，安装地址https://gradle.org/install/

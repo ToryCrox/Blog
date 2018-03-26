@@ -24,6 +24,7 @@ tags: "hexo"
 - 其他
 - 附录
 
+<!--more-->
 ### Github上创建一个仓库
 名称为：aleaf.github.io
 
@@ -116,9 +117,9 @@ theme下载：https://hexo.io/themes/
 git clone https://github.com/iissnan/hexo-theme-next themes/next
 ```
 
-打开站点_config.yml文件，配置主题为next:
+打开站点`_config.yml`文件，配置主题为next:
 
-```ini
+```yml
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
@@ -131,7 +132,7 @@ next主题有三个样式，使用是Pisces
 #### 设置为中文
 找到主题的_config.yml，修改
 
-```
+```yml
 language: zh-Hans
 ```
 
@@ -140,7 +141,7 @@ language: zh-Hans
 主要个性主题配置文件`_config.yml`
 
 社交主页设置, 找到`social`
-```
+```yml
 social:
   GitHub: https://github.com/ToryCrox
 ```
@@ -150,7 +151,7 @@ social:
 默认的侧栏菜单条目有：首页、归档、标签、关于、搜索等。如果你想要增加其他的菜单条目，修改主题配置文件`_config.yml`里的`Menu Settings`中的`menu`和`menu_icons`两个地方
 
 设置侧栏的位置:修改 主题配置文件 中的 `sidebar` 字段:
-```ini
+```yml
 sidebar:
   position: left
 ```
@@ -165,7 +166,7 @@ $ npm install hexo-generator-searchdb --save
 ```
 
 2. 编辑 站点配置文件，新增以下内容到任意位置：
-```ini
+```yml
 search:
   path: search.xml
   field: post Toggle strikethrough
@@ -174,7 +175,7 @@ search:
 ```
 
 3. 编辑 主题配置文件，启用本地搜索功能：
-```ini
+```yml
 # Local search
 local_search:
   enable: true
@@ -188,14 +189,14 @@ hexo new page tags
 ```
 
 2. 编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下：
-```
+```yml
 title: 标签
 date: 2014-12-22 12:39:04
 type: "tags"
 ```
 
 3. 修改菜单，编辑主题配置文件 ， 添加 tags 到 menu 中
-```ini
+```yml
 menu:
   home: /
   archives: /archives
@@ -220,3 +221,37 @@ menu:
   tags: /tags
 ```
 
+#### 让首页不显示全文
+有两种方法，参考: [Hexo Next 阅读全文设置 Next主题怎么让首页不显示全文](http://www.5isjyx.com/coding/201704/nextreadthefulltext.html)
+
+1. `themes/next` 目录下的 `_config.yml` 文件，找到这段代码
+
+```yml
+# Automatically Excerpt. Not recommend.
+# Please use <!-- more --> in the post to control excerpt accurately.
+auto_excerpt:
+  enable: false
+  length: 150
+```
+
+把 `enable` 的 `false` 改成 `true` 就行了，然后 `length` 是设定文章预览的文本长度
+
+2. 写 md 文章的时候，可以在内容中加上 `<!--more-->`，这样首页和列表页展示的文章内容就是 `<!--more-->` 之前的文字，而之后的就不会显示了。
+
+> 虽然第一种方法配置简单，但是显示的预览会乱，所以我选第二种方法
+
+#### 设置首页文章数量
+
+首页默认显示10篇文章，会导致首页很长，可以在站点`_config.yml`文件中，搜索`per_page`，修改显示数量
+```yml
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 5
+  order_by: -date
+```
+
+参考: [Hexo程序archive页面数量设置](http://www.yuzhewo.com/2015/11/21/Hexo%E7%A8%8B%E5%BA%8Farchive%E9%A1%B5%E9%9D%A2%E6%95%B0%E9%87%8F%E8%AE%BE%E7%BD%AE/)

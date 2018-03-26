@@ -28,7 +28,7 @@ git stash pop   #应用暂存修改并删除
 git stah list   #查看暂存的修改
 git stash apply [stash@{0}] #应用指定的暂存修改
 ```
-
+<!--more-->
 ### 提交
 
 `git commit --amend` 添加到最后一次提交
