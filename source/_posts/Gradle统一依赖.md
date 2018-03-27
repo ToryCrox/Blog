@@ -19,34 +19,36 @@ ext{
             targetSdkVersion: 27
     ]
 
-    librarys = [
-            appcompat           : "com.android.support:appcompat-v7:$supportVersion",
-            cardview            : "com.android.support:cardview-v7:$supportVersion",
-            recyclerview        : "com.android.support:recyclerview-v7:$supportVersion",
-            preference          : "com.android.support:preference-v7:$supportVersion",
-            supportv4           : "com.android.support:support-v4:$supportVersion",
-            design              : "com.android.support:design:$supportVersion",
-            palette             : "com.android.support:palette-v7:$supportVersion",
+    libraries = [
+            appcompat           : "com.android.support:appcompat-v7:${supportVersion}",
+            cardview            : "com.android.support:cardview-v7:${supportVersion}",
+            recyclerview        : "com.android.support:recyclerview-v7:${supportVersion}",
+            preference          : "com.android.support:preference-v7:${supportVersion}",
+            supportv4           : "com.android.support:support-v4:${supportVersion}",
+            design              : "com.android.support:design:${supportVersion}",
+            palette             : "com.android.support:palette-v7:${supportVersion}",
             constraintLayout    : "com.android.support.constraint:constraint-layout:1.0.2",
 
-            okhttp3             : "com.squareup.okhttp3:okhttp:3.2.0",
-            retrofit            : "com.squareup.retrofit2:retrofit:2.1.0",
-            retrofitRxjava      : "com.squareup.retrofit2:adapter-rxjava:2.1.0",
-            gson                : "com.google.code.gson:gson:2.8.1",
-            converterGson       : "com.squareup.retrofit2:converter-gson:2.1.0",
+            okhttp3             : "com.squareup.okhttp3:okhttp:3.10.0",
+            okhttp3Logging      : "com.squareup.okhttp3:logging-interceptor:3.10.0",
+            gson                : "com.google.code.gson:gson:2.8.2",
+            retrofit            : "com.squareup.retrofit2:retrofit:2.4.0",
+            converterGson       : "com.squareup.retrofit2:converter-gson:2.4.0",
+            adapterRxjava       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
 
             glide               : "com.github.bumptech.glide:glide:3.7.0",
-            rxjava              : "io.reactivex:rxjava:1.2.0",
-            rxandroid           : "io.reactivex:rxandroid:1.2.1",
+            rxjava              : "io.reactivex.rxjava2:rxjava:2.1.9",
+            rxandroid           : "io.reactivex.rxjava2:rxandroid:2.0.2",
             fastjson            : "com.alibaba:fastjson:1.2.17",
             stetho              : "com.facebook.stetho:stetho:1.3.1",
             stethoOkhttp3       : "com.facebook.stetho:stetho-okhttp3:1.3.1",
+
+            rxlifecycleComponents:"com.trello.rxlifecycle2:rxlifecycle-components:2.2.1",
+
             butterknife         : "com.jakewharton:butterknife:8.6.0",
             butterknifeCompiler : "com.jakewharton:butterknife-compiler:8.6.0",
 
-            //滑动关闭Activity
             slidr               : "com.r0adkll:slidableactivity:2.0.6",
-
             eventbus            : "org.greenrobot:eventbus:3.1.1",
             eventbusCompiler    : "org.greenrobot:eventbus-annotation-processor:3.1.1",
 

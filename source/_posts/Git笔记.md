@@ -18,6 +18,12 @@ git log -p -2 # 查看最近两次详细修改内容的
 git log --stat # 查看提交统计信息
 ```
 
+### git reflog查看被撤消的提交
+```bash
+#恢复
+git reset --hard [hash]
+```
+
 ### git stash暂存
 `git stash`用好很强大
 
