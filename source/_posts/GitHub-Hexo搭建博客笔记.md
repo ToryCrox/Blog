@@ -29,6 +29,10 @@ tags: "hexo"
 名称为：aleaf.github.io
 
 
+### 安装Node.js
+
+Hexo基于`Node.js`，`Node.js`下载地址：[Download | Node.js](https://nodejs.org/en/download/) 下载安装包，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 node -v :
+
 ### 安装Hexo
 
 使用npm命令安装Hexo，输入：
