@@ -61,6 +61,19 @@ git push origin HEAD:refs/for/master
 
 > `refs/for/master`需要经过`code review`之后才可以提交；`refs/heads/master`不需要`code review`
 
+### 远程更新
+
+在pull代码的时候，最好加上--rebase
+```bash
+git pull --rebase
+```
+
+因为git pull --rebase因为se这个命令做了以下内容：
+
+> - 把你 commit 到本地仓库的内容，取出来放到暂存区(stash)（这时你的工作区是干净的，这样就不会产生冲突啦）
+> - 然后从远端拉取代码到本地，由于工作区是干净的，所以不会有冲突
+> - 从暂存区把你之前提交的内容取出来，跟拉下来的代码合并
+
 
 ### git blame查看某一行代码的修改历史
 
@@ -111,6 +124,28 @@ git rm -r --cached  "bin/"
 git commit -m "remove bin folder all file out of control"    //提交
 git push origin master   //提交到远程服务器
 ```
+
+### 分支管理
+```bash
+#查看分支
+#查看本地分支
+git branch
+#查看远程分支
+git branch -r
+#查看本地和远程分支
+git branch -a
+
+#创建分支
+git branch 分支名
+#切换
+git checkout 分支名
+#创建+切换分支
+git checkout -b 分支名
+
+#删除分支
+git branch -d 分支名
+```
+
 
 ## 基本配置
 
@@ -184,3 +219,23 @@ git config --global https.proxy 'socks5://127.0.0.1:1080'
 
   [1]: http://www.imooc.com/article/1089 "25个 Git 进阶技巧"
   [2]: http://www.imooc.com/article/1111 "Git常用命令备忘"
+
+
+### 查看配置信息
+
+system（系统级别）->global（用户级别，也就是所有仓库）->local（当前仓库）
+```bash
+#查看系统config
+git config --system --list
+
+#查看当前用户（global）配置
+git config --global  --list
+
+#查看当前仓库配置信息（需要在仓库中使用）
+git config --local  --list
+```
+
+### .gitignore
+
+GitHub官方的所有.gitignore文件
+https://github.com/github/gitignore
