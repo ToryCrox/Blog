@@ -89,28 +89,42 @@ uploadArchives {
 ## 将源码，java doc等一并上传
 
 ```java
-// type显示指定任务类型或任务, 这里指定要执行Javadoc这个task,这个task在gradle中已经定义
-task androidJavadocs(type: Javadoc) {
-    // 设置源码所在的位置
-    source = android.sourceSets.main.java.sourceFiles
+// 指定编码
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
 }
-
-// 生成javadoc.jar
-task androidJavadocsJar(type: Jar) {
-    // 指定文档名称
-    classifier = 'javadoc'
-    from androidJavadocs.destinationDir
-}
-
-// 生成sources.jar
-task androidSourcesJar(type: Jar) {
+  
+// 打包源码
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
     classifier = 'sources'
-    from android.sourceSets.main.java.sourceFiles
 }
-
-// 产生相关配置文件的任务
+  
+task javadoc(type: Javadoc) {
+    failOnError  false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.compile
+}
+  
+// 制作文档(Javadoc)
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+  
 artifacts {
-    archives androidSourcesJar
-    archives androidJavadocsJar
+    archives sourcesJar
+    archives javadocJar
 }
+```
+
+## 上传jitpack
+
+jitpack网址:https://jitpack.io/
+
+添加jitpack的仓库引用:
+
+```java
+maven { url 'https://jitpack.io' }
 ```
