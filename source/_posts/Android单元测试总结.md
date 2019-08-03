@@ -54,7 +54,7 @@ androidTestCompile libraries.uiautomator
 androidTestCompile libraries.annotations
 androidTestCompile libraries.espresso
 ```
-
+<!--more-->
 ### 各框架的基本使用
 
 #### Junit4
