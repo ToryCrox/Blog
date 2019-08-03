@@ -173,7 +173,7 @@ if(XOS_LANCHER_TRANSITION && transit == TRANSIT_WALLPAPER_CLOSE){
  - 退场动画的位置参数从哪里来
 
 这里看一下进场动画时的设置流程:
-![进场动画时的设置流程](../images/进场动画时的设置流程.png)
+![进场动画时的设置流程](/images/进场动画时的设置流程.png)
 
 可以看到是`ActivityStack`在执行`Resume`的流程时一步步将`ScaleUp`的相关参数设置到AppTranssion中去的。
 所以可以仿照这个流程在`WindowMamagerService`和`AppTransition`中添加一个`overridePendingAppTransitionScaleUp`方法:
@@ -285,7 +285,7 @@ final boolean startPausingLocked(boolean userLeaving, boolean uiSleeping, boolea
 * 退场动画需要一个合适的减速过程才能达到理想的效果
 
 经过反复试验，最终采用以(0.1,0),(0.1,1)为控制点的三阶贝塞尔曲线
-![Alt text](../images/_1471512031023.png)
+![Alt text](/images/进出场动画贝塞尔曲线.png)
 
 * 放慢速度会发现，在退场动画时app界面会在Launcher界面下面，这样会感觉Icon图标变得很巨大，而没有给人App界面缩小，最后变成Icon的错觉
 
